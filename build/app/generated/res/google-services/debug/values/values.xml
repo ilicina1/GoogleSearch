@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">248528710409-86ivmd9iotpjg4c302e3ou3orej7dkvg.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">248528710409</string>
+    <string name="google_api_key" translatable="false">AIzaSyDUqL6SjsmvSrFc7p3gXe6c9LVQIisgW4I</string>
+    <string name="google_app_id" translatable="false">1:248528710409:android:4b17e47747a4985e83c1d8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDUqL6SjsmvSrFc7p3gXe6c9LVQIisgW4I</string>
+    <string name="google_storage_bucket" translatable="false">pretrazivac-fa8e2.appspot.com</string>
+    <string name="project_id" translatable="false">pretrazivac-fa8e2</string>
+</resources>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ilhanlicina/FlutterProjects/google_pretrazivac/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/Users/ilhanlicina/Flutter/google_pretrazivac/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "/Users/ilhanlicina/.gradle/caches/transforms-2/files-2.1/60f2015f063da3fda4980a081a4df320/jetified-play-services-auth-16.0.1/res/values-watch-v20/values.xml",

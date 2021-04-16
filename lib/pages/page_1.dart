@@ -56,7 +56,7 @@ class _MyHomePageState extends State<PageOneApp> {
                 Container(
                   height: SizeConfig.screenHeight * 0.5,
                   width: SizeConfig.screenWidth,
-                  child: Image.asset('assets/google.png'),
+                  child: Image.asset('assets/images/google.png'),
                 ),
               ],
             ),

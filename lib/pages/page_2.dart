@@ -92,7 +92,7 @@ class _PageTwoState extends State<PageTwo> {
                     Container(
                       height: SizeConfig.screenHeight * 0.3,
                       width: SizeConfig.screenWidth,
-                      child: Image.asset('assets/google.png'),
+                      child: Image.asset('assets/images/google.png'),
                     ),
                     Container(
                       height: 50,

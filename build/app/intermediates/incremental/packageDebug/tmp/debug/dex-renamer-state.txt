@@ -1,4 +1,4 @@
-#Wed Apr 14 10:00:25 CEST 2021
-base.0=/Users/ilhanlicina/FlutterProjects/google_pretrazivac/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Fri Apr 16 10:15:01 CEST 2021
+base.0=/Users/ilhanlicina/Flutter/google_pretrazivac/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

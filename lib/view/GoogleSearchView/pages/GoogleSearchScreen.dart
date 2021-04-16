@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_pretrazivac/services/GoogleSearchServices/GoogleSearchServices.dart';
 import 'package:google_pretrazivac/view/GoogleSearchView/widgets/MyWebViewWidget.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../../utils/shared/size_config.dart';
@@ -16,41 +17,11 @@ class PageTwo extends StatefulWidget {
 class _PageTwoState extends State<PageTwo> {
   final textFieldValueHolder = TextEditingController();
 
-  // metoda zaduzena za pretrazivanje u webview
-  void searchGoogle(String text) async {
-    // dodajemo tekst koji ce se pretrazivati parametru 'q'
-    urlGoogle += text;
-    // mijenjamo razmake sa znakom '+'
-    urlGoogle = urlGoogle.replaceAll(' ', '+');
-    // pushamo webview
-    title = "Google search";
-    selectedUrl = urlGoogle;
-
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (BuildContext cont5ext) => MyWebView(),
-      ),
-    );
-  }
-
-  // metoda zaduzena za gmail u webview
-  void openGmail() async {
-    title = "Gmail";
-    selectedUrl = urlGmail;
-    // pushamo webview
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (BuildContext cont5ext) => MyWebView(),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
@@ -73,7 +44,7 @@ class _PageTwoState extends State<PageTwo> {
                     ),
                     TextButton(
                       onPressed: () {
-                        openGmail();
+                        GoogleSearchServices().openGmail(context);
                       },
                       child: Icon(
                         Icons.mail,
@@ -108,7 +79,7 @@ class _PageTwoState extends State<PageTwo> {
                             result = '';
                             result += textFieldValueHolder.text;
                           });
-                          searchGoogle(result);
+                          GoogleSearchServices().searchGoogle(context, result);
                         },
                         child: Text('Search'),
                         style: TextButton.styleFrom(

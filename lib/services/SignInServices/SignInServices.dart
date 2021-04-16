@@ -28,7 +28,8 @@ class SignInServices {
       if (_googleSignIn.currentUser != null) {
         await Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => PageTwo(_googleSignIn)),
+          MaterialPageRoute(
+              builder: (context) => GoogleSearchScreen(_googleSignIn)),
         );
         // setState(() {
         //   _googleSignIn = _googleSignIn;

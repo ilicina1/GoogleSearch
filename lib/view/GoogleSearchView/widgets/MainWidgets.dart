@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_pretrazivac/services/GoogleSearchServices/GoogleSearchServices.dart';
 import 'package:google_pretrazivac/view/GoogleSearchView/widgets/GoogleSearchWidgets.dart';
+import 'package:google_pretrazivac/viewModel/GoogleSearchViewModel.dart';
 import '../../../utils/shared/size_config.dart';
 import 'package:google_pretrazivac/utils/textVariables/TextVariables.dart';
 
@@ -25,7 +25,7 @@ class MainWidgets {
               result = '';
               result = textFieldValueHolder.text;
 
-              GoogleSearchServices().searchGoogle(context, result);
+              searchGoogle(context, result);
             },
             child: Text('Search'),
             style: TextButton.styleFrom(

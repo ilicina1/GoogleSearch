@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_pretrazivac/services/GoogleSearchServices/GoogleSearchServices.dart';
+import 'package:google_pretrazivac/viewModel/GoogleSearchViewModel.dart';
 import '../../../utils/shared/size_config.dart';
 
 class GoogleSearchWidgets {
@@ -38,7 +38,7 @@ class GoogleSearchWidgets {
         ),
         TextButton(
           onPressed: () {
-            GoogleSearchServices().openGmail(context);
+            openGmail(context);
           },
           child: Icon(
             Icons.mail,

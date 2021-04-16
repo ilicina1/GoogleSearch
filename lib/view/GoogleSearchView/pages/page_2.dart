@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_pretrazivac/services/my_web_view.dart';
+import 'package:google_pretrazivac/view/GoogleSearchView/widgets/my_web_view.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../../utils/shared/size_config.dart';
+import 'package:google_pretrazivac/utils/textVariables/TextVariables.dart';
 
 class PageTwo extends StatefulWidget {
   final GoogleSignIn _googleSignIn;
@@ -15,21 +16,18 @@ class PageTwo extends StatefulWidget {
 class _PageTwoState extends State<PageTwo> {
   final textFieldValueHolder = TextEditingController();
 
-  String result = '';
-
   // metoda zaduzena za pretrazivanje u webview
   void searchGoogle(String text) async {
-    String url = "https://www.google.com/search?q=";
     // dodajemo tekst koji ce se pretrazivati parametru 'q'
-    url += text;
+    urlGoogle += text;
     // mijenjamo razmake sa znakom '+'
-    url = url.replaceAll(' ', '+');
+    urlGoogle = urlGoogle.replaceAll(' ', '+');
     // pushamo webview
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (BuildContext cont5ext) => MyWebView(
           title: "GoogleSearch",
-          selectedUrl: url,
+          selectedUrl: urlGoogle,
         ),
       ),
     );
@@ -37,14 +35,12 @@ class _PageTwoState extends State<PageTwo> {
 
   // metoda zaduzena za gmail u webview
   void openGmail() async {
-    String url = "https://www.gmail.com/";
-
     // pushamo webview
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (BuildContext cont5ext) => MyWebView(
           title: "Gmail",
-          selectedUrl: url,
+          selectedUrl: urlGmail,
         ),
       ),
     );

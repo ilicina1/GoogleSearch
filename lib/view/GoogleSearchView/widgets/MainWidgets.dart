@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_pretrazivac/utils/style/Styles.dart';
 import 'package:google_pretrazivac/view/GoogleSearchView/widgets/GoogleSearchWidgets.dart';
 import 'package:google_pretrazivac/viewModel/GoogleSearchViewModel.dart';
 import '../../../utils/shared/size_config.dart';
@@ -28,8 +29,7 @@ class MainWidgets {
               searchGoogle(context, result);
             },
             child: Text('Search'),
-            style: TextButton.styleFrom(
-                primary: Colors.white, backgroundColor: Colors.blue),
+            style: Styles.blueButton,
           ),
         )
       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_pretrazivac/utils/style/Styles.dart';
 import 'package:google_pretrazivac/viewModel/GoogleSearchViewModel.dart';
 import '../../../utils/shared/size_config.dart';
 
@@ -14,8 +15,7 @@ class GoogleSearchWidgets {
       child: TextField(
         // textfield za pretrazivac
         controller: textFieldValueHolder,
-        decoration: InputDecoration(
-            border: OutlineInputBorder(), hintText: 'Type something'),
+        decoration: Styles.decoration,
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_pretrazivac/utils/style/Styles.dart';
 
 class BottomElementsWidgets {
   var context;
@@ -14,8 +15,7 @@ class BottomElementsWidgets {
           child: TextButton(
             onPressed: () {},
             child: Text('Done by'),
-            style: TextButton.styleFrom(
-                primary: Colors.white, backgroundColor: Colors.blue),
+            style: Styles.blueButton,
           ),
         ),
         Padding(
@@ -23,14 +23,7 @@ class BottomElementsWidgets {
           child: Container(
             child: Text(
               _googleSignIn.currentUser!.displayName.toString(),
-              style: TextStyle(
-                  fontSize:
-                      // u zavisnosti da li je u pitanju mobitel
-                      // ili tablet stavljamo razlicite velicine fonta
-                      MediaQuery.of(context).size.width > 600 ? 22.0 : 16,
-                  color: MediaQuery.of(context).size.width > 600
-                      ? Colors.blue
-                      : Colors.black),
+              style: Styles.doneByStyle,
             ),
           ),
         )

@@ -14,4 +14,8 @@ class Styles {
 
   static final InputDecoration decoration =
       InputDecoration(border: OutlineInputBorder(), hintText: 'Type something');
+
+  static final TextStyle siginHone = TextStyle(
+    fontSize: SizeConfig.screenWidth > 600 ? 35.0 : 25,
+  );
 }

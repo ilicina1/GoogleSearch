@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_pretrazivac/utils/style/Styles.dart';
 import 'package:google_pretrazivac/viewModel/SignInViewModel.dart';
 
 class MainBodyWidgets {
@@ -16,9 +17,7 @@ class MainBodyWidgets {
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 25),
               child: Text(
                 'Sign in with google account',
-                style: TextStyle(
-                  fontSize: MediaQuery.of(context).size.width > 600 ? 35.0 : 25,
-                ),
+                style: Styles.siginHone,
               ),
             )
           ],
@@ -35,8 +34,7 @@ class MainBodyWidgets {
                   style: TextStyle(fontSize: 18),
                 ),
               ),
-              style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue, primary: Colors.white),
+              style: Styles.blueButton,
             ),
           ],
         )

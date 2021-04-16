@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_pretrazivac/services/SignInServices/SignInServices.dart';
 import 'package:google_pretrazivac/view/SignInView/widgets/MainBodyWidgets.dart';
+import 'package:google_pretrazivac/viewModel/SignInViewModel.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class SignIn extends StatefulWidget {
@@ -17,7 +17,7 @@ class _SignInState extends State<SignIn> {
     // pri prvom pokretanju zelimo ukoliko je vec neko prijavljen da ga
     // odjavi kako bi se sljedeci mogao prijaviti
     _googleSignIn.signOut();
-    SignInServices(context).listenOnCurrentUser(_googleSignIn);
+    listenOnCurrentUser(context, _googleSignIn);
   }
 
   @override

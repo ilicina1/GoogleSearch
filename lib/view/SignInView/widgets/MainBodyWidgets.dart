@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_pretrazivac/services/SignInServices/SignInServices.dart';
+import 'package:google_pretrazivac/viewModel/SignInViewModel.dart';
 
 class MainBodyWidgets {
   var context;
@@ -27,8 +27,7 @@ class MainBodyWidgets {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: () =>
-                  SignInServices(context).handleSignIn(_googleSignIn),
+              onPressed: () => handleSignIn(context, _googleSignIn),
               child: Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: Text(

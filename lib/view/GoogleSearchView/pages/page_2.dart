@@ -23,25 +23,24 @@ class _PageTwoState extends State<PageTwo> {
     // mijenjamo razmake sa znakom '+'
     urlGoogle = urlGoogle.replaceAll(' ', '+');
     // pushamo webview
+    title = "Google search";
+    selectedUrl = urlGoogle;
+
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (BuildContext cont5ext) => MyWebView(
-          title: "GoogleSearch",
-          selectedUrl: urlGoogle,
-        ),
+        builder: (BuildContext cont5ext) => MyWebView(),
       ),
     );
   }
 
   // metoda zaduzena za gmail u webview
   void openGmail() async {
+    title = "Gmail";
+    selectedUrl = urlGmail;
     // pushamo webview
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (BuildContext cont5ext) => MyWebView(
-          title: "Gmail",
-          selectedUrl: urlGmail,
-        ),
+        builder: (BuildContext cont5ext) => MyWebView(),
       ),
     );
   }

@@ -9,7 +9,7 @@ void main() => runApp(
         initialRoute: '/',
         routes: {
           // definisanje ruta
-          '/': (context) => PageOne(),
+          '/': (context) => LoadingScreen(),
           '/signin': (context) => SignIn(),
           '/pagetwo': (context) => GoogleSearchScreen(GoogleSignIn()),
         },

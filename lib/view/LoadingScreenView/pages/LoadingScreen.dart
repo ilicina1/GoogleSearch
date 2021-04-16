@@ -1,20 +1,39 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_pretrazivac/utils/shared/size_config.dart';
+import 'package:google_pretrazivac/view/LoadingScreenView/widgets/MainBodyWidget.dart';
 
-class PageOne extends StatelessWidget {
+// class PageOne extends StatelessWidget {
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return PageOneApp(
+//       title: 'GoogleSearch',
+//     );
+//   }
+// }
+
+class LoadingScreen extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // SizeConfig().init(context);
-    return PageOneApp(
+    return LoadingScreenApp(
       title: 'GoogleSearch',
     );
   }
 }
 
-class PageOneApp extends StatefulWidget {
-  PageOneApp({Key? key, required this.title}) : super(key: key);
+// class PageOneApp extends StatefulWidget {
+//   PageOneApp({Key? key, required this.title}) : super(key: key);
+
+//   final String title;
+
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
+
+class LoadingScreenApp extends StatefulWidget {
+  LoadingScreenApp({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -22,7 +41,7 @@ class PageOneApp extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<PageOneApp> {
+class _MyHomePageState extends State<LoadingScreenApp> {
   @override
   void initState() {
     super.initState();
@@ -45,23 +64,7 @@ class _MyHomePageState extends State<PageOneApp> {
         elevation: 0.0,
         title: Text(widget.title),
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 100.0, 0, 0),
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: SizeConfig.screenHeight * 0.5,
-                  width: SizeConfig.screenWidth,
-                  child: Image.asset('assets/images/google.png'),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
+      body: MainBodyWidget().mainBodyWidget(),
     );
   }
 }

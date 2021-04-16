@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_pretrazivac/view/GoogleSearchView/widgets/my_web_view.dart';
+import 'package:google_pretrazivac/view/GoogleSearchView/widgets/MyWebViewWidget.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../../utils/shared/size_config.dart';
 import 'package:google_pretrazivac/utils/textVariables/TextVariables.dart';

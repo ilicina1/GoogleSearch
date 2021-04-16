@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_pretrazivac/services/my_web_view.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import '../../../services/size_config.dart';
+import '../../../utils/shared/size_config.dart';
 
 class PageTwo extends StatefulWidget {
   final GoogleSignIn _googleSignIn;
